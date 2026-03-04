@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobHunter - Find Your Perfect Job</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>JobHunter</h1>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Find Your Dream Job</h2>
+            <p>Opportunities from top companies, just for you</p>
+        </div>
+    </section>
+
+    <!-- ==================== SEARCH ==================== -->
+    <!-- ==================== USER PROFILE ==================== -->
+    <section class="profile-section" id="profile">
+        <div class="container profile-container">
+            <div class="profile-form-wrapper">
+                <h3>Create Your Profile</h3>
+                <form id="userProfileForm">
+                    <div class="form-group">
+                        <label for="userName">Full Name</label>
+                        <input type="text" id="userName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">Preferred Role</label>
+                        <input type="text" id="userRole" required placeholder="e.g. Frontend Developer">
+                    </div>
+                    <div class="form-group">
+                        <label for="userExperience">Experience (Years)</label>
+                        <input type="number" id="userExperience" required placeholder="e.g. 3" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="userSkills">Skills (comma separated)</label>
+                        <input type="text" id="userSkills" required placeholder="HTML, CSS, JavaScript">
+                    </div>
+                    <button type="submit" class="apply-btn">Save Profile</button>
+                </form>
+            </div>
+
+            <div class="profile-display-wrapper" id="profileDisplay" style="display: none;">
+                <h3>Your Profile</h3>
+                <div class="profile-card">
+                    <div class="profile-avatar">👤</div>
+                    <div class="profile-info">
+                        <h4 id="displayUserName">Name</h4>
+                        <p class="role" id="displayUserRole">Role</p>
+                        <p class="details"><strong>Experience:</strong> <span id="displayUserExperience"></span> years
+                        </p>
+                        <div class="skills-container" id="displayUserSkills">
+                            <!-- Skills will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Job title, company or keyword">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JOBS ==================== -->
+    <section class="jobs-section" id="jobs">
+        <div class="container jobs-container">
+
+            <!-- JOB LIST -->
+            <div class="jobs-list">
+
+                <div class="job-card">
+                    <h3 class="job-title">Frontend Developer</h3>
+                    <p class="job-company">Google · Remote</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">₹12 LPA</span>
+                    </div>
+                    <p class="job-desc">
+                        Build responsive web interfaces using HTML, CSS, and modern frameworks.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">UI/UX Designer</h3>
+                    <p class="job-company">Adobe · New York</p>
+                    <div class="job-tags">
+                        <span class="tag">Contract</span>
+                        <span class="tag">₹8 LPA</span>
+                    </div>
+                    <p class="job-desc">
+                        Design intuitive and visually stunning user experiences.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">Data Analyst</h3>
+                    <p class="job-company">Amazon · Bangalore</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">₹10 LPA</span>
+                    </div>
+                    <p class="job-desc">
+                        Analyze large datasets and support data-driven decisions.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">Backend Developer</h3>
+                    <p class="job-company">Netflix · Remote</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">₹15 LPA</span>
+                    </div>
+                    <p class="job-desc">
+                        Build scalable APIs and backend services using Node.js and databases.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">Machine Learning Intern</h3>
+                    <p class="job-company">Microsoft · Hyderabad</p>
+                    <div class="job-tags">
+                        <span class="tag">Internship</span>
+                        <span class="tag">₹40k / month</span>
+                    </div>
+                    <p class="job-desc">
+                        Work on real-world ML problems with industry mentors.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">DevOps Engineer</h3>
+                    <p class="job-company">Infosys · Pune</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">₹11 LPA</span>
+                    </div>
+                    <p class="job-desc">
+                        Manage CI/CD pipelines, cloud infrastructure, and deployments.
+                    </p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <h3>Filters</h3>
+                <p>Location</p>
+                <p>Experience</p>
+                <p>Salary</p>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>2026 JobHunter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
