@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Promise Example</title>
+</head>
+
+<body>
+
+<h2>Promise Example</h2>
+
+<script>
+
+let myPromise = new Promise(function(resolve, reject) {
+
+    setTimeout(function() {
+        resolve("Data fetched successfully");
+    }, 2000);
+
+});
+
+myPromise.then(function(result) {
+    document.write(result);
+})
+
+.catch(function(error) {
+    document.write("Error occurred");
+});
+
+</script>
+
+</body>
+</html>
